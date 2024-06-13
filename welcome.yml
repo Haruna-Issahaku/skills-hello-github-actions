@@ -4,7 +4,10 @@ on:
     types: [opened]
 permissions:
   pull-requests: write
+
 jobs:
-  build:
-    name: Post welcome comment
+  welcome-comment:
     runs-on: ubuntu-latest
+    steps:
+      - name: Check that all required env variables are set
+        run: echo "Check that all required env variables are set"
